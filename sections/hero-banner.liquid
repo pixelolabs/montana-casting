@@ -8,9 +8,9 @@
               <picture>
                 <source
                   media="(max-width: 600px)"
-                  srcset="{{ block.settings.image }}"
+                  srcset="{{ block.settings.image | img_url: 'large' }}"
                 >
-                <img src="{{ block.settings.image }}" alt="">
+                <img src="{{ block.settings.image | img_url: 'large'}}" alt="">
               </picture>
                 {% endif %}
             </div>
