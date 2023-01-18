@@ -1,6 +1,17 @@
 <div class="three-column-image-boxes">
   <ul class="flex-wrap">
+    {% for block in section.blocks %}
     <li>
+      {% if block.settings.image != blank %}
+      <img src="{{ "dummy-image.webp" |asset_url}}" alt="">
+      {% endif %}
+      <div class="content">
+        <a class="link--primary"> Shop </a>
+        <h3>Rods</h3>
+      </div>
+    </li>
+    {% endfor %}
+<!--     <li>
       <img src="{{ "dummy-image.webp" |asset_url}}" alt="">
       <div class="content">
         <a class="link--primary"> Shop </a>
@@ -34,20 +45,16 @@
         <a class="link--primary"> Shop </a>
         <h3>Rods</h3>
       </div>
-    </li>
-    <li>
-      <img src="{{ "dummy-image.webp" |asset_url}}" alt="">
-      <div class="content">
-        <a class="link--primary"> Shop </a>
-        <h3>Rods</h3>
-      </div>
-    </li>
+    </li> -->
   </ul>
 </div>
 
 {% schema %}
   {
     "name": "Three column image",
+    "blocks": [{
+      "name": "Category",
+      "type": "category",
     "settings": [
       {
         "id": "custom_text_title",
@@ -72,5 +79,6 @@
          "label": "Background Image"
       }
     ]
+       }] 
   }
 {% endschema %}
