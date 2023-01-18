@@ -2,8 +2,12 @@
   {% include 'icon-two-fish' %}
   <div class="container-1440">
     <div class="heading-section flex">
-      <h2>@montanacastingco</h2>
-      <a class="link--primary">Follow Us on Instagram</a>
+      {% if section.settings.content %}
+      <h2>{{ section.settings.content }}@montanacastingco</h2>
+      {% endif %}
+      {% if section.settings.insta_button %}
+      <a class="link--primary" href="{{ section.settings.insta_url }}">{{ section.settings.insta_button }}Follow Us on Instagram</a>
+      {% endif %}
     </div>
     <ul>
       <li>
@@ -49,6 +53,11 @@
       "id": "username",
       "label": "Add instagram user name"
     },
+    {
+          "type": "text",
+          "id": "insta_button",
+          "label": "Instagram button title"
+      },
     {
           "type": "url",
           "id": "insta_url",
