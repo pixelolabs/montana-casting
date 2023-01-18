@@ -2,10 +2,11 @@
   <div class="container-1240">
     <div class="content">
       {% include 'icon-two-fish' %}
+      {% if block.settings.custom_text_title %}
       <h2 class="h2-big">
-        Montana Casting Co. creates fly fishing rods and reels that will out-perform your expectations no matter the
-        conditions.
+        {{ block.settings.custom_text_title }}
       </h2>
+      {% endif %}
       <p>
         As designers of cutting-edge fly fishing gear, we understand the value of time spent on the river and the
         memories we make there. Most importantly, we know hwat it takes to make a fly rod that will keep you on the
@@ -25,3 +26,28 @@
     </picture>
   </div>
 </div>
+
+{% schema %}
+  {
+    "name": "Full width bottom section",
+    "settings": [
+      {
+        "id": "custom_text_title",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "id": "custom_text_body",
+        "type": "text",
+        "label": "Add custom text below",
+        "default": "Add your text here"
+      },
+      {
+         "type": "image_picker",
+         "id": "image",
+         "label": "Slide Image"
+      }
+    ]
+  }
+{% endschema %}
