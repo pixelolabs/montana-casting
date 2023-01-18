@@ -13,16 +13,20 @@
       </p>
       {% endif %}
     </div>
-    <a class="btn--primary">Learn About Our Story</a>
+    {% if section.settings.button != null %}
+    <a href="{{ section.settings.button_url }}" class="btn--primary">{{ section.settings.button }}</a>
+    {% endif %}
   </div>
   <div class="image-section">
+    {% if section.settings.image != blank %}
     <picture>
       <source
         media="(max-width: 600px)"
-        srcset="{{ "homepage-mountain-range.webp" |asset_url}}"
+        srcset="{{ block.settings.image | img_url: 'large' }}"
       >
-      <img src="{{ "homepage-mountain-range.webp" |asset_url}}" alt="">
+      <img src="{{ block.settings.image | img_url: 'large' }}" alt="">
     </picture>
+    {% endif %}
   </div>
 </div>
 
@@ -47,6 +51,11 @@
           "id": "button",
           "label": "Button",
           "default": "Button"
+      },
+      {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Url"
       },
       {
          "type": "image_picker",
