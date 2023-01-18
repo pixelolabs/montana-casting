@@ -93,6 +93,11 @@
           "button_url": "",
           "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
         }
+      },
+      "three-column-image-boxes": {
+        "type": "three-column-image-boxes",
+        "settings": {
+        }
       }
     },
     "content_for_index": [
