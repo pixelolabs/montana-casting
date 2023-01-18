@@ -162,6 +162,14 @@
         ],
         "settings": {
         }
+      },
+      "testimonial-section": {
+        "type": "testimonial-section",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/where_we_are_today_-_about.png",
+          "content": "“I have fished all over the world with every brand of fly fishing rods and reels you can imagine. My Montana         Casting Company equipment is the best I’ve ever owned. Lightweight yet extremely powerful, I will never fish         with another brand of rod again!”",
+          "name": "— Mike C."
+        }
       }
     },
     "content_for_index": [
