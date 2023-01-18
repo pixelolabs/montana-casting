@@ -203,6 +203,12 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
+          },
+          "93a71c4a-27dc-4cbc-aaee-db09d851bca0": {
+            "type": "Instagram",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
           }
         },
         "block_order": [
@@ -210,7 +216,8 @@
           "0a8ed5d0-ea58-43dc-bd9f-13c70dff261a",
           "1e7461ca-cb25-4ed6-9f24-ae6872d1daa2",
           "0580e5e9-6675-4267-bf01-014de163bb5f",
-          "17e30077-df8d-499a-818c-c466d19736d3"
+          "17e30077-df8d-499a-818c-c466d19736d3",
+          "93a71c4a-27dc-4cbc-aaee-db09d851bca0"
         ],
         "settings": {
           "username": "@montanacastingco",
