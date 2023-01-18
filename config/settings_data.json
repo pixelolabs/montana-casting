@@ -102,12 +102,63 @@
             "settings": {
               "heading": "Title",
               "button": "Button",
-              "button_url": ""
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "5cedc94f-304a-4091-8267-04a4631ce7a9": {
+            "type": "category",
+            "settings": {
+              "heading": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "e84ce9b6-59ca-432a-b1fa-a9fc482f76e9": {
+            "type": "category",
+            "settings": {
+              "heading": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "206e6bb6-0250-4c24-a808-17b228605c8d": {
+            "type": "category",
+            "settings": {
+              "heading": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "1ce5ba2f-02a3-49bf-9e46-21ad005c3470": {
+            "type": "category",
+            "settings": {
+              "heading": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "02076153-09a0-44ca-8da9-c1c93988ee9f": {
+            "type": "category",
+            "settings": {
+              "heading": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
           }
         },
         "block_order": [
-          "03cd45a8-2031-4bd9-a37a-e3961945fc87"
+          "03cd45a8-2031-4bd9-a37a-e3961945fc87",
+          "5cedc94f-304a-4091-8267-04a4631ce7a9",
+          "e84ce9b6-59ca-432a-b1fa-a9fc482f76e9",
+          "206e6bb6-0250-4c24-a808-17b228605c8d",
+          "1ce5ba2f-02a3-49bf-9e46-21ad005c3470",
+          "02076153-09a0-44ca-8da9-c1c93988ee9f"
         ],
         "settings": {
         }
