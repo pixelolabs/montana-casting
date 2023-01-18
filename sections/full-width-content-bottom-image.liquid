@@ -7,12 +7,11 @@
         {{ section.settings.custom_text_title }}
       </h2>
       {% endif %}
+      {% if section.settings.custom_text_description %}
       <p>
-        As designers of cutting-edge fly fishing gear, we understand the value of time spent on the river and the
-        memories we make there. Most importantly, we know hwat it takes to make a fly rod that will keep you on the
-        water, making memories for years to come. We are a family owned & operated fly fishing company in the heart of
-        Montana.
+        {{ section.settings.custom_text_description }}
       </p>
+      {% endif %}
     </div>
     <a class="btn--primary">Learn About Our Story</a>
   </div>
@@ -38,10 +37,10 @@
         "default": "Title"
       },
       {
-        "id": "custom_text_body",
+        "id": "custom_text_description",
         "type": "text",
-        "label": "Add custom text below",
-        "default": "Add your text here"
+        "label": "Add custom description below",
+        "default": "Add your description here"
       },
       {
          "type": "image_picker",
