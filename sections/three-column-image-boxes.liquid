@@ -44,3 +44,33 @@
     </li>
   </ul>
 </div>
+
+{% schema %}
+  {
+    "name": "Three column image",
+    "settings": [
+      {
+        "id": "custom_text_title",
+        "type": "text",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+          "type": "text",
+          "id": "button",
+          "label": "Button",
+          "default": "Button"
+      },
+      {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Url"
+      },
+      {
+         "type": "image_picker",
+         "id": "image",
+         "label": "Background Image"
+      }
+    ]
+  }
+{% endschema %}
