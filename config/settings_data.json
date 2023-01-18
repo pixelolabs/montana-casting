@@ -1,9 +1,35 @@
 {
   "current": {
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "6c61ee5f-c41f-4953-8469-435b5195e3a8": {
+            "type": "announcement",
+            "settings": {
+              "header_text": "Announcement Banner",
+              "announcement_link": "",
+              "announcement_link_text": "Learn More"
+            }
+          },
+          "3ae04d55-ff9d-450c-bf5d-303a023e29bf": {
+            "type": "announcement",
+            "settings": {
+              "header_text": "Announcement Banner",
+              "announcement_link": "",
+              "announcement_link_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "6c61ee5f-c41f-4953-8469-435b5195e3a8",
+          "3ae04d55-ff9d-450c-bf5d-303a023e29bf"
+        ],
         "settings": {
+          "logo": "shopify:\/\/shop_images\/logo-black-solid.png",
           "nav_menu": "",
           "show_announcement": true,
           "header_text": "Announce something here",
