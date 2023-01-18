@@ -1,40 +1,12 @@
 {
   "current": {
-    "freeShippingThresholdValue": "hello",
-    "social_facebook_link": "https:\/\/facebook.com\/shopify",
-    "social_instagram_link": "http:\/\/instagram.com\/shopify",
-    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
     "sections": {
       "header": {
         "type": "header",
-        "blocks": {
-          "f4d4380f-9c0b-4c50-81f0-53e1a026355b": {
-            "type": "announcement",
-            "settings": {
-              "header_text": "Announcement Banner",
-              "announcement_link": "",
-              "announcement_link_text": "Learn More"
-            }
-          },
-          "2455a30b-7444-4e35-a766-11cdff200108": {
-            "type": "announcement",
-            "settings": {
-              "header_text": "Announcement Banner",
-              "announcement_link": "",
-              "announcement_link_text": ""
-            }
-          }
-        },
-        "block_order": [
-          "f4d4380f-9c0b-4c50-81f0-53e1a026355b",
-          "2455a30b-7444-4e35-a766-11cdff200108"
-        ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/black-solid_2x_894c1ef3-42f9-4824-b1e7-072629c9003e.png",
-          "mobileLogo": "shopify:\/\/shop_images\/black-solid_2x_894c1ef3-42f9-4824-b1e7-072629c9003e.png",
-          "nav_menu": "main-menu-2-0",
+          "nav_menu": "",
           "show_announcement": true,
-          "header_text": "",
+          "header_text": "Announce something here",
           "announcement_link": "",
           "announcement_link_text": "",
           "announcementColor": ""
@@ -43,213 +15,16 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "topImage": "shopify:\/\/shop_images\/footer-landscape-desktop.webp",
-          "logo": "shopify:\/\/shop_images\/white-line_2x_d5ad6869-0bd5-4100-9c5d-27b0e178d496.png",
+          "topImage": "shopify:\/\/shop_images\/footer-landscape-desktop.png",
+          "logo": "shopify:\/\/shop_images\/montana-logo-white.webp",
           "newsTitle": "Newsletter Signup",
           "newsContent": "Stay in the Know",
           "bottomTextLink": "<p>Thanks to the talented photographers who provided for this site. See <a href=\"\/\" title=\"\/\">Photo Credits<\/a><\/p>",
-          "footerMenu": "footer-menu-2-0",
-          "footerLegalMenu": "footer-legal-menu-2-0",
+          "footerMenu": "",
+          "footerLegalMenu": "",
           "copyrightText": "Copyright 2022 © Montana Casting Co. All Rights Reserved",
           "designedByText": "Designed by Sleepless",
           "designedByLink": "\/"
-        }
-      },
-      "six-column-insta-section": {
-        "type": "six-column-insta-section",
-        "blocks": {
-          "efcda8d9-76b8-417c-a8b2-f9a08689c09c": {
-            "type": "block",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/insta-img.webp",
-              "imageLink": ""
-            }
-          },
-          "4a8fb1bd-eb58-4981-a4c3-64e307cafc27": {
-            "type": "block",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/insta-img2.webp",
-              "imageLink": ""
-            }
-          },
-          "b66e82a6-9daf-45ae-9e2b-6e5cf48f442b": {
-            "type": "block",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/insta-img3.webp",
-              "imageLink": ""
-            }
-          },
-          "386dc013-1a65-4f41-8d6b-d95a94269011": {
-            "type": "block",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/insta-img4.webp",
-              "imageLink": ""
-            }
-          },
-          "d30cf221-1a99-4d6e-98b4-90d7bcdbd6a7": {
-            "type": "block",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/insta-img5.webp",
-              "imageLink": ""
-            }
-          },
-          "d142b62b-17c7-4e99-8010-554508539a02": {
-            "type": "block",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/insta-img6.webp",
-              "imageLink": ""
-            }
-          }
-        },
-        "block_order": [
-          "efcda8d9-76b8-417c-a8b2-f9a08689c09c",
-          "4a8fb1bd-eb58-4981-a4c3-64e307cafc27",
-          "b66e82a6-9daf-45ae-9e2b-6e5cf48f442b",
-          "386dc013-1a65-4f41-8d6b-d95a94269011",
-          "d30cf221-1a99-4d6e-98b4-90d7bcdbd6a7",
-          "d142b62b-17c7-4e99-8010-554508539a02"
-        ],
-        "settings": {
-          "title": "@montanacastingco",
-          "linkText": "Follow us on Instagram",
-          "textLink": "\/"
-        }
-      },
-      "full-width-testimonial-section": {
-        "type": "full-width-testimonial-section",
-        "settings": {
-          "description": "<p>“I have fished all over the world with every brand of fly fishing rods and reels you can imagine. My Montana Casting Company equipment is the best I’ve ever owned. Lightweight yet extremely powerful, I will never fish with another brand of rod again!”<\/p>",
-          "descriptionBy": "— Mike C.",
-          "image": "shopify:\/\/shop_images\/mike-carisch.webp"
-        }
-      },
-      "three-column-image-boxes-section": {
-        "type": "three-column-image-boxes-section",
-        "blocks": {
-          "81ffa492-189e-48f1-b6ba-a4d2e6221e4e": {
-            "type": "column",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/mh-pic-4.webp",
-              "link": "\/",
-              "linkText": "",
-              "title": "Rods"
-            }
-          },
-          "3dd41ffb-3f34-442f-bcfd-3e193de8e053": {
-            "type": "column",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/reels_7a1caef5-324b-4955-a152-7ac54a0533a5.webp",
-              "link": "\/",
-              "linkText": "",
-              "title": "Reels"
-            }
-          },
-          "fb4cf2aa-2ae4-4b74-b183-c1147158095d": {
-            "type": "column",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/fly_lines.webp",
-              "link": "\/",
-              "linkText": "",
-              "title": "Fly Lines"
-            }
-          },
-          "781b4fbe-e631-4525-9481-b140f2850929": {
-            "type": "column",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/tippet_leaders.webp",
-              "link": "\/",
-              "linkText": "",
-              "title": "Tippet & Leaders"
-            }
-          },
-          "40bc56de-09f7-44c0-8e17-9329e3967614": {
-            "type": "column",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Accessories.webp",
-              "link": "\/",
-              "linkText": "",
-              "title": "Accessories"
-            }
-          },
-          "2decb392-8776-45af-837b-67e4fd7cbd03": {
-            "type": "column",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Apparel.webp",
-              "link": "\/",
-              "linkText": "",
-              "title": "Apparel"
-            }
-          }
-        },
-        "block_order": [
-          "81ffa492-189e-48f1-b6ba-a4d2e6221e4e",
-          "3dd41ffb-3f34-442f-bcfd-3e193de8e053",
-          "fb4cf2aa-2ae4-4b74-b183-c1147158095d",
-          "781b4fbe-e631-4525-9481-b140f2850929",
-          "40bc56de-09f7-44c0-8e17-9329e3967614",
-          "2decb392-8776-45af-837b-67e4fd7cbd03"
-        ],
-        "settings": {
-        }
-      },
-      "full-width-content-bottom-image-section": {
-        "type": "full-width-content-bottom-image-section",
-        "settings": {
-          "title": "Montana Casting Co. creates fly fishing rods and reels that will out-perform your expectations no matter the conditions.",
-          "description": "<p>As designers of cutting-edge fly fishing gear, we understand the value of time spent on the river and the memories we make there. Most importantly, we know hwat it takes to make a fly rod that will keep you on the water, making memories for years to come. We are a family owned & operated fly fishing company in the heart of Montana.<\/p>",
-          "btnLink": "\/",
-          "btnText": "Learn about our story",
-          "image": "shopify:\/\/shop_images\/homepage-mountain-range-desktop.webp",
-          "mobileImage": "shopify:\/\/shop_images\/homepage-mountain-range-mobile.webp"
-        }
-      },
-      "half-image-half-content-product-slider-section": {
-        "type": "half-image-half-content-product-slider-section",
-        "blocks": {
-          "ead2f8c9-3e93-47a5-a409-9c06e1efc539": {
-            "type": "product",
-            "settings": {
-              "product": "406-elite-fly-fishing-reel"
-            }
-          }
-        },
-        "block_order": [
-          "ead2f8c9-3e93-47a5-a409-9c06e1efc539"
-        ],
-        "settings": {
-        }
-      },
-      "home_hero": {
-        "type": "home_hero",
-        "blocks": {
-          "145612b3-b090-4165-bf81-82188b9ef345": {
-            "type": "slide",
-            "settings": {
-              "backgroundImage": "shopify:\/\/shop_images\/flyfishing-mt-bynum.webp",
-              "backgroundImageMobile": "shopify:\/\/shop_images\/flyfishing-mt-bynum-mobile.webp",
-              "title": "Fly fishing gear rigorously tested on Montana waters.",
-              "description": "Rods. Reels. Lines. Accessories. It’s time to own the river.",
-              "buttonText": "optional button",
-              "buttonLink": "\/"
-            }
-          },
-          "ca200911-904c-43c9-b886-6504c3e1aa7e": {
-            "type": "slide",
-            "settings": {
-              "backgroundImage": "shopify:\/\/shop_images\/flyfishing-mt-bynum.webp",
-              "backgroundImageMobile": "shopify:\/\/shop_images\/flyfishing-mt-bynum-mobile.webp",
-              "title": "Fly fishing gear rigorously tested on Montana waters.",
-              "description": "Rods. Reels. Lines. Accessories. It’s time to own the river.",
-              "buttonText": "Optional Button",
-              "buttonLink": "\/"
-            }
-          }
-        },
-        "block_order": [
-          "145612b3-b090-4165-bf81-82188b9ef345",
-          "ca200911-904c-43c9-b886-6504c3e1aa7e"
-        ],
-        "settings": {
         }
       }
     },
