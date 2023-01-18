@@ -4,13 +4,13 @@
       {% for block in section.blocks %}
           <div class="slide swiper-slide ">
             <div class="image-section">
-              {% if block.settings.image %}
+              {% if block.settings.image != blank %}
               <picture>
                 <source
                   media="(max-width: 600px)"
-                  srcset="{{ block.settings.image |asset_url}}"
+                  srcset="{{ block.settings.image }}"
                 >
-                <img src="{{ block.settings.image |asset_url}}" alt="">
+                <img src="{{ block.settings.image }}" alt="">
               </picture>
                 {% endif %}
             </div>
