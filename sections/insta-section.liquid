@@ -10,7 +10,16 @@
       {% endif %}
     </div>
     <ul>
+      {% for block in section.blocks %}
       <li>
+        {% if block.settings.image != blank %}
+        <a class="image-section">
+          <img src="{{ block.settings.image | img_url: 'large' }}" alt="">
+        </a>
+        {% endif %}
+      </li>
+      {% endfor %}
+<!--       <li>
         <a class="image-section">
           <img src="{{ "dummy-image.webp" |asset_url}}" alt="">
         </a>
@@ -34,12 +43,7 @@
         <a class="image-section">
           <img src="{{ "dummy-image.webp" |asset_url}}" alt="">
         </a>
-      </li>
-      <li>
-        <a class="image-section">
-          <img src="{{ "dummy-image.webp" |asset_url}}" alt="">
-        </a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </div>
