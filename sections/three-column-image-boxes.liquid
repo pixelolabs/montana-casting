@@ -3,11 +3,15 @@
     {% for block in section.blocks %}
     <li>
       {% if block.settings.image != blank %}
-      <img src="{{ "dummy-image.webp" |asset_url}}" alt="">
+       <img src="{{ block.settings.image | img_url: 'large' }}" alt="">
       {% endif %}
       <div class="content">
-        <a class="link--primary"> Shop </a>
-        <h3>Rods</h3>
+        {% if block.settings.button %}
+        <a class="link--primary" href="{{ block.settings.button_url }}"> {{ block.settings.button }} </a>
+        {% endif %}
+        {% if block.settings.heading %}
+        <h3>{{ block.settings.heading }}</h3>
+        {% endif %}
       </div>
     </li>
     {% endfor %}
@@ -57,7 +61,7 @@
       "type": "category",
     "settings": [
       {
-        "id": "custom_text_title",
+        "id": "heading",
         "type": "text",
         "label": "Title",
         "default": "Title"
