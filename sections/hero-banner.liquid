@@ -23,7 +23,7 @@
                 <p>{{ block.settings.sub_heading }}</p>
               {% endif %}
               {% if block.settings.slid_button %}
-                <a class="btn--primary" >{{ block.settings.slid_button }}</a>
+                <a class="btn--primary" href="{{ section.settings.button_url }}">{{ block.settings.slid_button }}</a>
               {% endif %}
               </div>
             </div>
@@ -70,6 +70,11 @@
             "id": "slid_button",
             "label": "Button",
             "default": "Button"
+          },
+          {
+              "type": "url",
+              "id": "button_url",
+              "label": "Button Url"
           },
           {
            "type": "image_picker",
