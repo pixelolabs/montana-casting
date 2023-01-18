@@ -22,9 +22,9 @@
     <picture>
       <source
         media="(max-width: 600px)"
-        srcset="{{ block.settings.image | img_url: 'large' }}"
+        srcset="{{ section.settings.image | img_url: 'large' }}"
       >
-      <img src="{{ block.settings.image | img_url: 'large' }}" alt="">
+      <img src="{{ section.settings.image | img_url: 'large' }}" alt="">
     </picture>
     {% endif %}
   </div>
