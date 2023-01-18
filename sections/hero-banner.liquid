@@ -1,23 +1,23 @@
 <div class="hero-banner-slider">
   <div class="slider js__hero-banner-slider">
     <div class="swiper-wrapper">
-      {% for block in section.blocks %}
+      {% for blocks in section.blocks %}
           <div class="slide swiper-slide ">
             <div class="image-section">
-              {% if block.settings.image != blank %}
+              {% if blocks.settings.image != blank %}
               <picture>
                 <source
                   media="(max-width: 600px)"
-                  srcset="{{ block.settings.image | img_url: 'large' }}"
+                  srcset="{{ blocks.settings.image | img_url: 'large' }}"
                 >
-                <img src="{{ block.settings.image | img_url: 'large'}}" alt="">
+                <img src="{{ blocks.settings.image | img_url: 'large'}}" alt="">
               </picture>
                 {% endif %}
             </div>
             <div class="container-1280">
               <div class="content">
-              {% if block.settings.heading %}
-                <h2 class="h1">{{ block.settings.heading }}</h2>
+              {% if blocks.settings.heading %}
+                <h2 class="h1">{{ blocks.settings.heading }}</h2>
               {% endif %}
               {% if block.settings.sub_heading %}
                 <p>{{ block.settings.sub_heading }}</p>
