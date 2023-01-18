@@ -30,7 +30,7 @@
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo-black-solid.png",
-          "nav_menu": "",
+          "nav_menu": "main-menu-2-0",
           "show_announcement": true,
           "header_text": "Announce something here",
           "announcement_link": "",
@@ -46,7 +46,7 @@
           "newsTitle": "Newsletter Signup",
           "newsContent": "Stay in the Know",
           "bottomTextLink": "<p>Thanks to the talented photographers who provided for this site. See <a href=\"\/\" title=\"\/\">Photo Credits<\/a><\/p>",
-          "footerMenu": "",
+          "footerMenu": "footer-menu-2-0",
           "footerLegalMenu": "",
           "copyrightText": "Copyright 2022 © Montana Casting Co. All Rights Reserved",
           "designedByText": "Designed by Sleepless",
