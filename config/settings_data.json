@@ -96,6 +96,19 @@
       },
       "three-column-image-boxes": {
         "type": "three-column-image-boxes",
+        "blocks": {
+          "03cd45a8-2031-4bd9-a37a-e3961945fc87": {
+            "type": "category",
+            "settings": {
+              "heading": "Title",
+              "button": "Button",
+              "button_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "03cd45a8-2031-4bd9-a37a-e3961945fc87"
+        ],
         "settings": {
         }
       }
