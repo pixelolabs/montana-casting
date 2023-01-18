@@ -1,0 +1,47 @@
+    .full-width-content-bottom-image {
+        padding: 40px 0 25.95vw;
+        @include MQ(MQ-1440) {
+            padding-bottom: 18.5vw;
+        }
+        @include MQ(MQ-1100) {
+            padding-bottom: 0;
+        }
+        .container-1240 {
+            position: relative;
+            z-index: 4;
+            @include MQ(MQ-480) {
+                padding: 0 10px;
+                .content {
+                    padding: 0 20px;
+                }
+            }
+        }
+        text-align: center;
+        position: relative;
+        h2 {
+            margin: 40px 0 0;
+        }
+        p {
+            max-width: 700px;
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+        .btn--primary {
+            margin: 25px 0 0;
+        }
+        .image-section {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 246px;
+            img {
+                @include img-object-cover
+            }
+            height: 51.19vw;
+            @include MQ(MQ-1100) {
+                position: relative;
+                margin-top: 40px;
+                top: 0;
+            }
+        }
+    }

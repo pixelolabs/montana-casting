@@ -1,0 +1,108 @@
+.testimonial-section {
+    padding: 30px 0 40px;
+    overflow: hidden;
+    .container-1400 {
+        border: 1px solid $color-gold;
+        padding-top: 80px;
+        padding-bottom: 100px;
+        text-align: center;
+        position: relative;
+        &::before {
+            width: 233px;
+            height: 231px;
+            position: absolute;
+            content: '';
+            bottom: 25px;
+            left: -80px;
+            background: url(insect-1.webp) no-repeat center/ 233px;
+            @include MQ(MQ-768) {
+                bottom: -30px;
+                width: 180px;
+                height: 180px;
+                background-size: 180px;
+                left: -70px;
+            }
+        }
+        &::after {
+            width: 237px;
+            height: 245px;
+            position: absolute;
+            content: '';
+            top: 80px;
+            right: -80px;
+            background: url(insect-3.webp) no-repeat center/ 237px;
+            @include MQ(MQ-768) {
+                top: -80px;
+                width: 140px;
+                height: 140px;
+                background-size: 140px;
+                right: -26px;
+            }
+        }
+    }
+    .container-1440 {
+        position: relative;
+        padding: 0 10px;
+        &::after {
+            width: 220px;
+            height: 223px;
+            position: absolute;
+            content: '';
+            top: -40px;
+            right: -55px;
+            background: url(insect-4.webp) no-repeat center/ 220px;
+            @include MQ(MQ-768) {
+                display: none;
+            }
+        }
+    }
+    .user-image {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        border-radius: 50%;
+        img {
+            @include img-object-cover;
+        }
+        margin: 0 auto;
+        margin-bottom: 30px;
+        @include MQ(MQ-480) {
+            margin-bottom: 20px;
+        }
+    }
+    .h3 {
+        max-width: 1000px;
+        margin: 0 auto;
+        font-weight: normal;
+        @include MQ(MQ-1280) {
+            padding: 0 80px;
+        }
+        @include MQ(MQ-768) {
+            padding: 0 20px;
+        }
+        @include MQ(MQ-480) {
+            font-size: 20px;
+            line-height: normal;
+            letter-spacing: normal;
+        }
+        p{
+            font-size: 30px;
+            line-height: normal;
+            font-family: $font-family-secondary;
+            letter-spacing: normal;
+            font-weight:normal;
+        
+        }
+    }
+    span {
+        font-family: $font-family-secondary;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 30px;
+        @include MQ(MQ-480) {
+            margin-top: 10px;
+        }
+        display: inline-block;
+        line-height: 1.5;
+    }
+}

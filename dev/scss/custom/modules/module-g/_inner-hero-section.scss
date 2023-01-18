@@ -1,0 +1,40 @@
+.inner-hero-section {
+    position: relative;
+    padding: 110px 20px;
+    @include MQ(MQ-480) {}
+    .image-section,
+    img {
+        @include img-object-cover;
+    }
+    .image-section {
+        border: 1px solid $color-gold;
+        width: calc(100% - 40px);
+        top: 0px;
+        left: 20px;
+        position: absolute;
+        &::before {
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            position: absolute;
+            content: "";
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            opacity: 0.4;
+            background-color: $color-black;
+        }
+    }
+    img {
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        top: 10px;
+        left: 10px;
+    }
+    h1 {
+        color: $color-white;
+    }
+    .container-1240 {
+        position: relative;
+        z-index: 3;
+    }
+}

@@ -1,0 +1,85 @@
+.collection {
+    &__product-list {
+        margin-left: -12px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: calc(100% + 12px);
+        @include MQ(MQ-767) {
+            margin-top: 25px;
+            margin-left: -9px !important;
+            width: calc(100% + 9px) !important;
+        }
+        .product-card {
+            width: 33.333% !important;
+            padding-left: 12px !important;
+            margin-bottom: 30px !important;
+            .boost-pfs-quickview-btn {
+                display: none !important;
+            }
+            .boost-pfs-addtocart-product-form {
+                width: 100% !important;
+            }
+            .boost-pfs-addtocart-btn {
+                position: absolute;
+                bottom: 12px;
+                left: 12px;
+                @include MQ(MQ-480) {
+                    display: none !important;
+                }
+                svg {
+                    display: none !important;
+                }
+                padding: 6px 14px !important;
+                border-radius: 20px !important;
+                background: $color-black !important;
+                font-size: 16px !important;
+                font-weight: 600 !important;
+                line-height: 1.5 !important;
+                text-align: center !important;
+                color: $color-white !important;
+                width: auto;
+            }
+            .image-section {
+                height: calc(33.333vw - 130px) !important;
+                max-height: 324px;
+                @include MQ(MQ-980) {
+                    height: calc(50vw - 189px) !important;
+                }
+            }
+            @include MQ(MQ-980) {
+                width: 50% !important;
+            }
+            @include MQ(MQ-767) {
+                padding-left: 9px !important;
+                margin-bottom: 40px !important;
+                .image-section {
+                    max-height: none;
+                    height: calc(50vw - 25.5px) !important;
+                }
+            }
+        }
+        &.full {
+            .product-card {
+                width: 25% !important;
+                .image-section {
+                    height: calc(25vw - 17px) !important;
+                    @include MQ(MQ-980) {
+                        height: calc(33.333vw - 18.7px) !important;
+                    }
+                }
+                @include MQ(MQ-980) {
+                    width: 33.333% !important;
+                }
+                @include MQ(MQ-767) {
+                    width: 50% !important;
+                    padding-left: 9px !important;
+                    margin-bottom: 40px !important;
+                    .image-section {
+                        max-height: none;
+                        height: calc(50vw - 25.5px) !important;
+                    }
+                }
+            }
+        }
+    }
+}

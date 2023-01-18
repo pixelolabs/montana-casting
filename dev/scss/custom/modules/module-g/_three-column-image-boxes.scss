@@ -1,0 +1,67 @@
+.three-column-image-boxes {
+    padding: 30px 10px 0px;
+    z-index: 4;
+    ul {
+        margin-bottom: -10px;
+    }
+    li {
+        height: 400px;
+        position: relative;
+        img {
+            @include img-object-cover
+        }
+        display: flex;
+        align-items: flex-end;
+        .content {
+            padding: 40px;
+            position: relative;
+            z-index: 3;
+            @include MQ(MQ-480) {
+                padding: 0 0 20px 26.5px;
+            }
+            h3 {
+                margin-top: 10px;
+                @include MQ(MQ-480) {
+                    margin-top: 8px;
+                }
+            }
+            * {
+                color: $color-white;
+            }
+        }
+        width: calc(25.175% - 10px);
+        margin-left: 10px;
+        margin-bottom: 10px;
+        &:first-child,
+        &:nth-child(5) {
+            margin-left: 0;
+            width: 49.65%;
+        }
+        &:nth-child(4) {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+        @include MQ(MQ-980) {
+            width: calc(34% - 10px);
+            &:first-child,
+            &:nth-child(4),
+            &:nth-child(5) {
+                width: 66%;
+            }
+            margin: 0 10px 10px 0;
+            &:nth-child(even) {
+                margin: 0 0 10px;
+            }
+        }
+        @include MQ(MQ-768) {
+            width: calc(50% - 5px) !important;
+            height: calc(50vw - 50px);
+        }
+        @include MQ(MQ-480) {
+            width: 100% !important;
+            height: calc(100vw - 60px);
+            margin: 0 0 10px;
+        }
+        // width: 49.65%;
+    }
+}

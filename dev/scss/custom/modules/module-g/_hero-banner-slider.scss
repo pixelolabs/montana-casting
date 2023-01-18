@@ -1,0 +1,95 @@
+.hero-banner-slider {
+    padding: 0px 20px;
+    position: relative;
+    overflow: hidden;
+    @include MQ(MQ-480) {
+        padding: 0 10px;
+        .swiper-button-next {
+            right: 5px;
+        }
+        .swiper-button-prev {
+            left: 5px;
+        }
+    }
+    @include MQ(MQ-768) {
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: calc(31.25vw - 0px)
+        }
+    }
+    .swiper-button-next,
+        .swiper-button-prev {
+            z-index: 1;
+        }
+    .slide {
+        height: 670px !important;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        @include MQ(MQ-768) {
+            height: auto !important;
+            flex-wrap: wrap;
+            border: 1px solid $color-gold;
+            padding-bottom: 25px;
+        }
+        .image-section {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border: 1px solid $color-gold;
+            @include MQ(MQ-768) {
+                position: relative;
+                height: 62.5vw;
+                border: none
+            }
+            img {
+                @include img-object-cover;
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                left: 10px;
+                top: 10px;
+            }
+            &::before {
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                left: 10px;
+                top: 10px;
+                content: '';
+                position: absolute;
+                opacity: 0.5;
+                z-index: 2;
+                background-image: linear-gradient(to right, #231f20 0%, rgba(35, 31, 32, 0));
+            }
+        }
+        .container-1280 {
+            position: relative;
+            z-index: 3;
+        }
+        .content {
+            max-width: 610px;
+            text-align: center;
+            * {
+                color: $color-white;
+            }
+            @include MQ(MQ-768) {
+                margin-top: 20px;
+                h2,
+                p {
+                    color: $color-black;
+                }
+            }
+            p {
+                margin-top: 20px;
+            }
+            .btn--primary {
+                margin-top: 25px;
+                @include MQ(MQ-480) {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

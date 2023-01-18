@@ -1,0 +1,375 @@
+// footer
+
+footer {
+  // background-color: $color-black;
+  
+  // padding: 0 0 35px;
+  position: relative;
+  * {
+    color: $color-white;
+  }
+  .image-section{
+    height: 48.55vw;
+    width: 100%;
+    img{
+      @include img-object-contain;
+      position:relative;
+      object-position: bottom;
+    }
+  }
+  .footer{
+    background-color: $color-black2;
+    // margin-top:-8px;
+    // padding-top:8px;
+    // @include MQ(MQ-980) {
+    //   margin-top:0px;
+    // }
+  }
+  .main-footer {
+    padding: 0px 80px 0 0px;
+    @include MQ(MQ-980) {
+      padding: 0px 30px;
+      flex-direction: column;
+    }
+    .main-footer__logo{
+      width: 409px;
+      height: 370px;
+      padding-right: 39px;
+      margin-top:-64px;
+      @include MQ(MQ-1440){
+        width:33.33%;
+      }
+      @include MQ(MQ-980) {
+        order:2;
+        width:calc(100% + 50px);
+        height: 310px;
+        // width: 100%;
+        padding-right: 0;
+        margin: 40px auto 0 -25px;
+        z-index: 0;
+      }
+      // @include MQ(MQ-480) {
+      //   margin: 40px auto -15px;
+      // }
+      img{
+        @include img-object-contain;
+        position:relative;
+        
+      }
+    }
+    &__nav {
+      padding: 0px 0 0px 60px;
+      @include MQ(MQ-1440){
+        width:33.33%;
+      }
+      // border-bottom: solid 0.5px $color-white;
+      @include MQ(MQ-980) {
+        max-width: 478px;
+        margin: 0 auto;
+        width:100%;
+        padding-left:0;
+        padding-top:20px;
+      }
+      .footer-links {
+        width: 50%;
+        padding-left:40px;
+        
+        @include MQ(MQ-980) {
+          width: 100%;
+          padding-left: 0;
+          padding-top:20px;
+          p{
+            cursor: pointer;
+            pointer-events: visible;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #fbf9f533;
+            position: relative;
+            &.active {
+              // &:before{
+              //   transform: rotate(-135deg);
+              // }
+            }
+            // &:before{
+            // position: absolute;
+            // content: "";
+            // border: 3px solid $color-maroon;
+            // border-width: 0 3px 3px 0;
+            // display: inline-block;
+            // padding: 4px;
+            // transform: rotate(45deg);
+            // right:0px;
+            // top: 9px;
+            
+            // } 
+          }
+          
+        }
+        p {
+          font-size: 15px;
+          font-family:$font-family-primary;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+            // padding:12px 0;
+          margin-bottom: 0px;
+          pointer-events: none;
+          max-width: 160px;
+          margin-top:0;
+          position: relative;
+          @include MQ(MQ-980) {
+            pointer-events: all;
+            width: 100%;
+            max-width: 100%;
+            
+          }
+          
+          svg {
+            
+            display: none;
+
+            @include MQ(MQ-980) {
+              display: block;
+              transform:rotate(90deg);
+            }
+          }
+          &.active {
+            @include MQ(MQ-980) {
+              svg {
+                transform: rotate(-90deg);
+              }
+            }
+          }
+        }
+        ul {
+          li {
+            margin-top: 12px;
+            a {
+              line-height: 1.64;
+              font-family: $font-family-primary;
+              opacity:0.5;
+              &:hover{
+                opacity:1;
+              }
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        .accordion-content {
+          display: none;
+          padding-left: 0px;
+          // margin-top:12px;
+          // margin-bottom: 40px;
+        }
+      }
+    }
+    &__newsletter {
+      // border-bottom: solid 0.5px $color-white;
+      // padding-bottom: 37px;
+      height: max-content;
+      flex-direction: column;
+      max-width:520px;
+        position:relative;
+      padding-left:41.5px;
+      @include MQ(MQ-1440){
+        width:33.33%;
+      }
+      &:before{
+        position:absolute;
+        border-left: 1px solid $color-white;
+        opacity:0.3;
+        width:1px;
+        height:100%;
+        left:0;
+        top:0;
+        content:"";
+        @include MQ(MQ-980){
+          display:none;
+        }
+      }
+      @include MQ(MQ-980) {
+        flex-direction: column;
+        padding: 0;
+        max-width:478px;
+        width:100%;
+        margin:0 auto;
+      }
+      .newsletter-form {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        
+      }
+      p {
+        font-size: 15px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2px;
+        font-family: $font-family-primary;
+        margin:0;
+      }
+      .h3 {
+        padding-top: 5px;
+      }
+    }
+  }
+  .copyright {
+    // padding-top: 20px;
+    align-items: center;
+    background:$color-black;
+    z-index: 1;
+    position: relative;
+    // padding:15px 80px;
+    
+    .copyright-section {
+      max-width:1440px;
+      padding:15px 80px;
+      margin: 0 auto;
+      width:100%;
+      display: flex;
+      align-items:center;
+      justify-content: space-between;
+      
+      @include MQ(MQ-980) {
+        flex-direction: column;
+        gap:10px;
+        padding:15px 30px;
+        text-align: center;
+      }
+      *{
+        // opacity: 0.5;
+        font-family:$font-family-primary;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color:$color-white;
+      }
+      p {
+        margin:0;
+        opacity: 0.5;
+      }
+    }
+  }
+  .link{
+    a{
+      opacity: 0.5;
+    }
+  }
+  .legal-links {
+    
+    li {
+      // margin-right: 57px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      a {
+        color: $color-white;
+        font-size: 14px;
+        line-height: normal;
+        opacity: 0.5;
+        position: relative;
+        padding: 0 8px;
+        // @include MQ(MQ-480) {
+        //   font-size: 12px;
+        // }
+        &:after {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 11px;
+          background:$color-white;
+          bottom: 1px;
+          right: -1px;
+      }
+      
+      }
+      &:last-child{
+        a{
+          &:after{
+            display:none;
+          }
+        }
+      }
+    }
+  }
+  .bottom-text-link{
+    margin-top:20px;
+    p{
+      opacity: 0.5;
+      font-family:$font-family-primary;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color:$color-white;
+      a{
+        text-decoration: underline;
+        font-family:$font-family-primary;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color:$color-white;
+        &:hover{
+          opacity: 1;
+        }
+      }
+      
+    }
+  }
+  .social-icons {
+   
+    margin-top:40px;
+    
+    li {
+      margin-right:15px;
+      display: flex;
+      align-items: center;
+      height: 30px;
+      width: 30px;
+      a {
+        height: 30px;
+        width: 30px;
+      }
+      svg {
+        path {
+          fill: $color-white;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: 981px) {
+  .footer-links {
+    .accordion-content {
+      display: block !important;
+    }
+  }
+}
+.icon-back-to-top{
+  display: none;
+  @include MQ(MQ-768){
+    display: block;
+    position: absolute;
+    bottom: 138px;
+    right: 20px;
+    cursor: pointer;
+
+  }
+}

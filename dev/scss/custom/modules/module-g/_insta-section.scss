@@ -1,0 +1,79 @@
+.insta-section {
+    text-align: center;
+    background: $color-white;
+    svg {
+        margin-top: -12px;
+    }
+    .container-1440 {
+        padding: 60px 10px;
+        position: relative;
+        @include MQ(MQ-480) {
+            padding: 80px 10px 30px;
+        }
+        &::before {
+            width: 293px;
+            height: 303px;
+            position: absolute;
+            content: '';
+            top: -130px;
+            left: -120px;
+            background: url(insect-2.webp) no-repeat center/ 293px;
+            @include MQ(MQ-980) {
+                display: none;
+            }
+        }
+        .heading-section {
+            justify-content: space-between;
+            align-items: flex-end;
+            .link--primary {
+                height: 26px;
+                @include MQ(MQ-768) {
+                    margin-top: 18px;
+                }
+            }
+            @include MQ(MQ-768) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            max-width: 1340px;
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-bottom: 22px;
+        }
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% + 10px);
+        margin-left: -10px;
+        li {
+            width: 16.666%;
+            padding-left: 10px;
+            @include MQ(MQ-980) {
+                width: 33.333%;
+                margin-bottom: 10px;
+            }
+            @include MQ(MQ-480) {
+                width: 50%;
+            }
+            a {
+                display: block;
+                position: relative;
+                height: calc(16.666vw - 10px);
+                max-height: 228px;
+                @include MQ(MQ-980) {
+                    height: calc(33.3333vw - 13.333px);
+                    max-height: none;
+                }
+                @include MQ(MQ-480) {
+                    height: calc(50vw - 15px);
+                    max-height: none;
+                }
+                img {
+                    @include img-object-cover
+                }
+            }
+        }
+    }
+}

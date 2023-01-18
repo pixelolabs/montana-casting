@@ -1,0 +1,323 @@
+{%- assign limit = section.settings.grid | times: section.settings.rows -%}
+
+{% paginate collection.products by limit %}
+  <div class="collection" data-section-id="{{ section.id }}" data-section-type="collection-template">
+    <div class="collection-header">
+      <div class="inner-hero-section">
+        {% if collection.image %}
+          <div class="image-section">
+            <picture>
+              <source
+                media="(max-width: 600px)"
+                srcset="{{ collection | img_url: 'master' }}"
+              >
+              <img
+                src="{{ collection | img_url: 'master' }}"
+                alt="{{ collection.title | escape }}"
+              >
+            </picture>
+          </div>
+        {% endif %}
+        <div class="container-1240 text-center">
+          <h1 class="big">
+            <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
+            {{ collection.title }}
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="full-width-content">
+      <div class="container-1060 text-center">
+        <h3>
+          Every fish caught, river walked, and memory made is connected by a single precious piece of gear: your fly
+          rod.
+        </h3>
+        <p>
+          Montana Casting Company is dedicated to delivering performance fly fishing rods that last a lifetime. That’s
+          why we’ve brought all our Montanan grit, experience, and values to the table in creating three top-of-the-line
+          models that will out-fish your expectations at every cast. Add on a custom-designed Montana Casting Co. reel
+          and line and you’ve got the perfect fish-wrangling package.
+        </p>
+      </div>
+    </div>
+    <div
+      class="collection-section"
+      id="CollectionSection"
+      data-section-id="{{ section.id }}"
+      data-section-type="collection-template"
+      data-sort-enabled="{{ section.settings.sort_enable }}"
+    >
+      <div class="container-1340 ">
+        <div class="collection__top-section text-center">
+          {% if is_filter_by_available or section.settings.sort_enable %}
+            <div class="filters-toolbar-wrapper{% if is_filter_by_available %} filters-toolbar--has-filter{% endif %}">
+              <div class="page-width">
+                <div class="filters-toolbar">
+                  <div class="filters-toolbar__item-wrapper">
+                    {% if section.settings.tags_enable %}
+                      {% unless collection.all_tags.size == 0 %}
+                        <div class="filters-toolbar__item-child">
+                          <label class=" hide filters-toolbar__label select-label" for="FilterTags">
+                            {{- 'collections.filters.title_tags' | t -}}
+                          </label>
+                          <div class="filters-toolbar__input-wrapper select-group">
+                            <select
+                              class="filters-toolbar__input hidden"
+                              name="FilterTags"
+                              id="FilterTags"
+                              aria-describedby="a11y-refresh-page-message a11y-selection-message"
+                              data-select-input
+                            >
+                              <option value="{{ collection.url }}">{{ 'collections.filters.all_tags' | t }}</option>
+                              {% for tag in collection.all_tags %}
+                                {%- assign new_url = tag
+                                  | link_to_tag: tag
+                                  | split: 'href="'
+                                  | last
+                                  | split: '"'
+                                  | first
+                                -%}
+                                <option
+                                  value="{{ new_url }}"
+                                  {% if current_tags contains tag %}
+                                    selected="selected"
+                                  {% endif %}
+                                >
+                                  {{ tag }}
+                                </option>
+                              {% endfor %}
+                            </select>
+                            {% include 'icon-chevron-down' %}
+                          </div>
+                        </div>
+                      {% endunless %}
+                    {% endif %}
+
+                    {% if section.settings.sort_enable %}
+                      <div class="filters-toolbar__input-wrapper select-group">
+                        <label class="filters-toolbar__label select-label capitalize hide" for="SortBy">
+                          {{- 'collections.sorting.title' | t -}}
+                        </label>
+                        {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                        <select
+                          name="sort_by"
+                          id="SortBy"
+                          class="filters-toolbar__input"
+                          data-default-sortby="{{ collection.default_sort_by }}"
+                          data-select-input
+                          aria-describedby="a11y-refresh-page-message"
+                        >
+                          {% for option in collection.sort_options %}
+                            <option
+                              value="{{ option.value }}"
+                              {% if sort_by == option.value %}
+                                selected="selected"
+                              {% endif %}
+                            >
+                              {{ option.name }}
+                            </option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    {% endif %}
+                  </div>
+
+                  <div class="filters-toolbar__item filters-toolbar__item--count hide">
+                    <span class="filters-toolbar__product-count">
+                      {{- 'collections.general.items_with_count' | t: count: collection.products_count -}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        <ul
+          class="collection__product-list grid grid--uniform{% if collection.products_count > 0 %} grid--view-items{% endif %}"
+        >
+          {% for product in collection.products %}
+            {% include 'product-card',
+              max_height: max_height,
+              product: product,
+              show_vendor: section.settings.show_vendor
+            %}
+          {% else %}
+            {% comment %}
+              Add default products to help with onboarding for collections/all only.
+              The onboarding styles and products are only loaded if the
+              store has no products.
+            {% endcomment %}
+            {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+              <li class="grid__item product-card 22">
+                <div class="grid grid--uniform">
+                  {% for i in (1..limit) %}
+                    <div class="grid__item">
+                      <div class="grid-view-item">
+                        <a href="#" class="grid-view-item__link">
+                          <div class="grid-view-item__image">
+                            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                          </div>
+                          <div class="h4 grid-view-item__title">{{ 'homepage.onboarding.product_title' | t }}</div>
+                          <div class="grid-view-item__meta">
+                            <span class="product-price__price">$19.99</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </li>
+            {% else %}
+              {%- assign is_empty_collection = true -%}
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        {% if is_empty_collection %}
+          <div class="grid__item small--text-center">
+            <p class="text-center">{{ 'collections.general.no_matches' | t }}</p>
+          </div>
+        {% endif %}
+
+        {%- if paginate.pages > 1 -%}
+          {% include 'pagination', paginate: paginate %}
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="half-content-half-image-outer text-center">
+      {% include 'icon-two-fish' %}
+      <div>
+        <div class="half-content-half-image text-left">
+          <div class="container-1340  flex-wrap">
+            <div class="image-section">
+              <img src="{{ "dummy-image-3.webp" |asset_url}}" alt="">
+            </div>
+            <div class="content">
+              <h3>Fly Fishing Rods Designed to Perform</h3>
+              <p>
+                It’d be great if we could talk Mother Nature into blue skies and windless days every time we wanted to
+                hit the river. Unfortunately for us, she rarely cooperates. Whether it’s rainclouds over a high mountain
+                lake or blistering heat in the open plains, we’ve all had to brave the elements for the love of fly
+                fishing—and our rods are no different. When you’re fighting the wind to hit a run framed by deadfall and
+                low hanging branches, the only way to get that fish to bite is having the right skills and the right fly
+                rod. Here at Montana Casting Co., we take pride in creating fly fishing rods that will out-perform your
+                expectations no matter the conditions. You’ve got the skills. We’ve got the rods. The river is calling.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="half-content-half-image">
+          <div class="container-1340  flex-wrap">
+            <div class="image-section">
+              <img src="{{ "dummy-image-3.webp" |asset_url}}" alt="">
+            </div>
+            <div class="content">
+              <h3>Fly Fishing Rods Designed to Perform</h3>
+              <p>
+                Do you remember when your best friend slammed a car door on the tip of your favorite fly rod? We
+                certainly do. In fact, we’ve dropped, snagged, and even stepped on our rods countless times over the
+                course of our fly fishing adventures. Sometimes, despite our best intentions, we fishermen treat our
+                rods rough. Because we at Montana Casting Company know this, we’ve taken it upon ourselves to deliver
+                you a fly fishing rod that not only casts effortlessly but is tough enough to last a lifetime of bumps,
+                batterings, and best friends. Happy fishing.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="half-content-half-image">
+          <div class="container-1340  flex-wrap">
+            <div class="image-section">
+              <img src="{{ "dummy-image-3.webp" |asset_url}}" alt="">
+            </div>
+            <div class="content">
+              <h3>Fly Fishing Rods Designed to Perform</h3>
+              <p>
+                We believe a fly fishing rod is more than the sum of its parts. It’s your tool, your connection to the
+                river and all the memories you make there. We all have a rod we fly fished with until we simply couldn’t
+                anymore. It’s the same fly rod you learned to cast with. The rod you used to hook monster rainbows on
+                the Russian River in Alaska or the one you almost lost when your raft cap-sized while floating the
+                Blackfoot. It was in your hands when a surprised moose nearly trampled you and it was there the last
+                time you and your father spent a day on the water. It’s the same fly fishing rod that your
+                eight-year-old clutched, your hands engulfing theirs as they learned to load the rod and snap the line
+                forward into their first roll cast.
+              </p>
+              <p>
+                As a family owned and operated company right here in the beautiful state of Montana, we understand the
+                value of time spent on the river and the memories we make there. Perhaps more importantly, we know what
+                it takes to make a fly rod that will keep you on the water, making memories for years to come.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": {
+    "en": "Collection pages"
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "subTitle",
+      "label": "SubTitle for Collection All"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image for Collection All"
+    },
+    {
+      "type": "range",
+      "id": "grid",
+      "label": {
+        "en": "Products per row (grid only)"
+      },
+      "default": 4,
+      "min": 2,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "label": {
+        "en": "Rows per page (grid only)"
+      },
+      "default": 2,
+      "min": 2,
+      "max": 8,
+      "step": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": {
+        "en": "Show product vendors"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "sort_enable",
+      "label": {
+        "en": "Enable sorting"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "tags_enable",
+      "label": {
+        "en": "Enable tag filtering"
+      },
+      "default": true
+    }
+  ]
+}
+{% endschema %}

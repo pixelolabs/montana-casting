@@ -1,0 +1,24 @@
+.swiper-button-next,
+.swiper-button-prev {
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.swiper-button-next {
+    rotate: 180deg;
+}
+
+footer {
+    overflow: hidden;
+}
+
+// header {
+//     display: none;
+// }
