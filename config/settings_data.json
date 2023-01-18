@@ -52,6 +52,25 @@
           "designedByText": "Designed by Sleepless",
           "designedByLink": "\/"
         }
+      },
+      "hero-banner": {
+        "type": "hero-banner",
+        "blocks": {
+          "a52d1730-8649-4566-a684-93c3daaa2bcd": {
+            "type": "slide",
+            "settings": {
+              "heading": "Fly fishing gear rigorously tested on Montana waters.",
+              "sub_heading": "Rods. Reels. Lines. Accessories. It’s time to own the river.",
+              "slid_button": "Optional Button",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          }
+        },
+        "block_order": [
+          "a52d1730-8649-4566-a684-93c3daaa2bcd"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
