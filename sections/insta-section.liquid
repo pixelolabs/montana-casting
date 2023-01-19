@@ -5,8 +5,8 @@
       {% if section.settings.username %}
       <h2>{{ section.settings.username }}</h2>
       {% endif %}
-      {% if section.settings.insta_button %}
-      <a class="link--primary" href="{{ section.settings.insta_url }}">{{ section.settings.insta_button }}</a>
+      {% if section.settings.button_text %}
+      <a class="link--primary" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
       {% endif %}
     </div>
     <ul>
@@ -31,17 +31,17 @@
     {
       "type": "text",
       "id": "username",
-      "label": "Add instagram user name"
+      "label": "Add instagram user ID"
     },
     {
           "type": "text",
-          "id": "insta_button",
-          "label": "Instagram button title"
+          "id": "button_text",
+          "label": "Button Text"
       },
     {
           "type": "url",
-          "id": "insta_url",
-          "label": "Instagram Url"
+          "id": "button_link",
+          "label": "Button Link"
       }
   ],
   "max_blocks": 6,
