@@ -86,16 +86,6 @@
         "settings": {
         }
       },
-      "full-width-content-bottom-image": {
-        "type": "full-width-content-bottom-image",
-        "settings": {
-          "custom_text_title": "Montana Casting Co. creates fly fishing rods and reels that will out-perform your expectations no matter the         conditions.",
-          "custom_text_description": "As designers of cutting-edge fly fishing gear, we understand the value of time spent on the river and the         memories we make there. Most importantly, we know hwat it takes to make a fly rod that will keep you on the         water, making memories for years to come. We are a family owned & operated fly fishing company in the heart of         Montana.",
-          "button": "Learn About Our Story",
-          "button_url": "",
-          "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
-        }
-      },
       "three-column-image-boxes": {
         "type": "three-column-image-boxes",
         "blocks": {
@@ -224,6 +214,17 @@
         "settings": {
           "description": "Add Descriptions",
           "attributes": ""
+        }
+      },
+      "full-width-section": {
+        "type": "full-width-section",
+        "settings": {
+          "custom_text_title": "Enter title here",
+          "custom_text_description": "Enter description here",
+          "button": "Button",
+          "button_url": "",
+          "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png",
+          "image_mobile": "shopify:\/\/shop_images\/jacket-4_3x_2109f8d2-102b-4097-9bed-b16ba3b34747.webp"
         }
       }
     },
