@@ -11,8 +11,8 @@
         {{ section.settings.description }}
       </p>
       {% endif %}
-      {% if section.settings.name %}
-      <span>{{ section.settings.name }}</span>
+      {% if section.settings.attributes %}
+      <span>{{ section.settings.attributes }}</span>
       {% endif %}
     </div>
   </div>
@@ -20,12 +20,12 @@
 
 {% schema %}
   {
-    "name": "Testimonial section",
+    "name": "Testimonial",
     "settings": [
       {
          "type": "image_picker",
          "id": "image",
-         "label": "Background Image"
+         "label": "User Image"
       },
       {
         "id": "description",
@@ -34,9 +34,9 @@
         "default": "Add Descriptions"
       },
       {
-        "id": "name",
+        "id": "attributes",
         "type": "text",
-        "label": "Name"
+        "label": "Attributes"
       }
     ]
   }
