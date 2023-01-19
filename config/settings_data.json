@@ -86,75 +86,6 @@
         "settings": {
         }
       },
-      "three-column-image-boxes": {
-        "type": "three-column-image-boxes",
-        "blocks": {
-          "03cd45a8-2031-4bd9-a37a-e3961945fc87": {
-            "type": "category",
-            "settings": {
-              "title": "Title",
-              "button": "Button",
-              "button_url": "",
-              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
-            }
-          },
-          "5cedc94f-304a-4091-8267-04a4631ce7a9": {
-            "type": "category",
-            "settings": {
-              "title": "Title",
-              "button": "Button",
-              "button_url": "",
-              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
-            }
-          },
-          "e84ce9b6-59ca-432a-b1fa-a9fc482f76e9": {
-            "type": "category",
-            "settings": {
-              "title": "Title",
-              "button": "Button",
-              "button_url": "",
-              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
-            }
-          },
-          "206e6bb6-0250-4c24-a808-17b228605c8d": {
-            "type": "category",
-            "settings": {
-              "title": "Title",
-              "button": "Button",
-              "button_url": "",
-              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
-            }
-          },
-          "1ce5ba2f-02a3-49bf-9e46-21ad005c3470": {
-            "type": "category",
-            "settings": {
-              "title": "Title",
-              "button": "Button",
-              "button_url": "",
-              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
-            }
-          },
-          "32b0c0c0-9dc9-4b0a-a6be-a306069b01ed": {
-            "type": "category",
-            "settings": {
-              "title": "Title",
-              "button": "Button",
-              "button_url": "",
-              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
-            }
-          }
-        },
-        "block_order": [
-          "03cd45a8-2031-4bd9-a37a-e3961945fc87",
-          "5cedc94f-304a-4091-8267-04a4631ce7a9",
-          "e84ce9b6-59ca-432a-b1fa-a9fc482f76e9",
-          "206e6bb6-0250-4c24-a808-17b228605c8d",
-          "1ce5ba2f-02a3-49bf-9e46-21ad005c3470",
-          "32b0c0c0-9dc9-4b0a-a6be-a306069b01ed"
-        ],
-        "settings": {
-        }
-      },
       "insta-section": {
         "type": "insta-section",
         "blocks": {
@@ -225,6 +156,75 @@
           "button_url": "",
           "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png",
           "image_mobile": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+        }
+      },
+      "three-column-section": {
+        "type": "three-column-section",
+        "blocks": {
+          "82b947bf-0cfd-400f-8d23-b50edffaae3f": {
+            "type": "category",
+            "settings": {
+              "title": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "08cb8b0a-4cf9-4630-8c32-b8950d1c5bcc": {
+            "type": "category",
+            "settings": {
+              "title": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "1b8e1562-d596-4b6c-80d4-5991312f9a97": {
+            "type": "category",
+            "settings": {
+              "title": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "f73a6742-e8b0-40cf-a70d-610a2990f2e2": {
+            "type": "category",
+            "settings": {
+              "title": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "186b9a5b-1596-42b1-b985-8dcfb1cbd8a6": {
+            "type": "category",
+            "settings": {
+              "title": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          },
+          "16275031-1684-4b5b-98bf-b8fa5aae874d": {
+            "type": "category",
+            "settings": {
+              "title": "Title",
+              "button": "Button",
+              "button_url": "",
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+            }
+          }
+        },
+        "block_order": [
+          "82b947bf-0cfd-400f-8d23-b50edffaae3f",
+          "08cb8b0a-4cf9-4630-8c32-b8950d1c5bcc",
+          "1b8e1562-d596-4b6c-80d4-5991312f9a97",
+          "f73a6742-e8b0-40cf-a70d-610a2990f2e2",
+          "186b9a5b-1596-42b1-b985-8dcfb1cbd8a6",
+          "16275031-1684-4b5b-98bf-b8fa5aae874d"
+        ],
+        "settings": {
         }
       }
     },
