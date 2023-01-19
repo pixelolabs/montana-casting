@@ -18,15 +18,17 @@
     {% endif %}
   </div>
   <div class="image-section">
-    {% if section.settings.image != blank %}
+    
     <picture>
       <source
         media="(max-width: 600px)"
         srcset="{{ section.settings.image | img_url: 'large' }}"
       >
-      <img src="{{ section.settings.image | img_url: 'large' }}" alt="">
+      {% if section.settings.image != blank %}
+       <img src="{{ section.settings.image | img_url: 'large' }}" alt="">
+      {% endif %}
     </picture>
-    {% endif %}
+   
   </div>
 </div>
 
@@ -60,7 +62,7 @@
       {
          "type": "image_picker",
          "id": "image",
-         "label": "Background Image"
+         "label": "Image (desktop)"
       }
     ]
   }
