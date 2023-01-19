@@ -4,15 +4,18 @@
       {% for block in section.blocks %}
           <div class="slide swiper-slide ">
             <div class="image-section">
-              {% if block.settings.image != blank %}
               <picture>
+                {% if block.settings.mobile_image != blank %}
                 <source
                   media="(max-width: 600px)"
-                  srcset="{{ block.settings.image | img_url: 'large' }}"
+                  srcset="{{ block.settings.mobile_image | img_url: 'large' }}"
                 >
-                <img src="{{ block.settings.image | img_url: 'large'}}" alt="">
-              </picture>
                 {% endif %}
+                {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | img_url: 'large'}}" alt="">
+                {% endif %}
+              </picture>
+                
             </div>
             <div class="container-1280">
               <div class="content">
@@ -65,18 +68,23 @@
           {
             "type": "text",
             "id": "button_text",
-            "label": "Button Text",
+            "label": "Button text",
             "default": "Button"
           },
           {
               "type": "url",
               "id": "button_url",
-              "label": "Button Link"
+              "label": "Button link"
           },
           {
            "type": "image_picker",
            "id": "image",
-           "label": "Slide Image"
+           "label": "Image (desktop)"
+         },
+          {
+           "type": "image_picker",
+           "id": "mobile_image",
+           "label": "Image (mobile)"
          }
           
         ]
