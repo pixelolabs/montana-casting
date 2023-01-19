@@ -16,14 +16,14 @@
             </div>
             <div class="container-1280">
               <div class="content">
-              {% if block.settings.heading %}
-                <h2 class="h1">{{ block.settings.heading }}</h2>
+              {% if block.settings.title %}
+                <h2 class="h1">{{ block.settings.title }}</h2>
               {% endif %}
-              {% if block.settings.sub_heading %}
-                <p>{{ block.settings.sub_heading }}</p>
+              {% if block.settings.description %}
+                <p>{{ block.settings.description }}</p>
               {% endif %}
-              {% if block.settings.slid_button %}
-                <a class="btn--primary" href="{{ section.settings.button_url }}">{{ block.settings.slid_button }}</a>
+              {% if block.settings.button_text %}
+                <a class="btn--primary" href="{{ section.settings.button_url }}">{{ block.settings.button_text }}</a>
               {% endif %}
               </div>
             </div>
@@ -52,19 +52,19 @@
           
           {
             "type": "text",
-            "id": "heading",
+            "id": "title",
             "label": "Title",
             "default": "Enter title here"
           },
           {
             "type": "text",
-            "id": "sub_heading",
+            "id": "description",
             "label": "Description",
             "default": "Enter description here"
           },
           {
             "type": "text",
-            "id": "slid_button",
+            "id": "button_text",
             "label": "Button Text",
             "default": "Button"
           },
