@@ -164,8 +164,8 @@
           "82b947bf-0cfd-400f-8d23-b50edffaae3f": {
             "type": "category",
             "settings": {
-              "title": "Title",
-              "button": "Button",
+              "title": "Rods",
+              "button": "Shop",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
@@ -173,8 +173,8 @@
           "08cb8b0a-4cf9-4630-8c32-b8950d1c5bcc": {
             "type": "category",
             "settings": {
-              "title": "Title",
-              "button": "Button",
+              "title": "Reels",
+              "button": "shop",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
@@ -182,8 +182,8 @@
           "1b8e1562-d596-4b6c-80d4-5991312f9a97": {
             "type": "category",
             "settings": {
-              "title": "Title",
-              "button": "Button",
+              "title": "Fly Lines",
+              "button": "shop",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
@@ -191,8 +191,8 @@
           "f73a6742-e8b0-40cf-a70d-610a2990f2e2": {
             "type": "category",
             "settings": {
-              "title": "Title",
-              "button": "Button",
+              "title": "Tippet & Leaders",
+              "button": "shop",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
@@ -200,8 +200,8 @@
           "186b9a5b-1596-42b1-b985-8dcfb1cbd8a6": {
             "type": "category",
             "settings": {
-              "title": "Title",
-              "button": "Button",
+              "title": "Accessories",
+              "button": "shop",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
@@ -209,8 +209,8 @@
           "16275031-1684-4b5b-98bf-b8fa5aae874d": {
             "type": "category",
             "settings": {
-              "title": "Title",
-              "button": "Button",
+              "title": "Apparel",
+              "button": "shop",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
