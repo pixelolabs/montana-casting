@@ -20,10 +20,12 @@
   <div class="image-section">
     
     <picture>
+      {% if section.settings.image_mobile != blank %}
       <source
         media="(max-width: 600px)"
-        srcset="{{ section.settings.image | img_url: 'large' }}"
+        srcset="{{ section.settings.image_mobile | img_url: 'large' }}"
       >
+      {% endif %}
       {% if section.settings.image != blank %}
        <img src="{{ section.settings.image | img_url: 'large' }}" alt="">
       {% endif %}
@@ -40,13 +42,13 @@
         "id": "custom_text_title",
         "type": "text",
         "label": "Title",
-        "default": "Add Title"
+        "default": "Enter title here"
       },
       {
         "id": "custom_text_description",
         "type": "text",
         "label": "Description",
-        "default": "Add your description here"
+        "default": "Enter description here"
       },
       {
           "type": "text",
@@ -63,6 +65,11 @@
          "type": "image_picker",
          "id": "image",
          "label": "Image (desktop)"
+      },
+      {
+         "type": "image_picker",
+         "id": "image_mobile",
+         "label": "Image (mobile)"
       }
     ]
   }
