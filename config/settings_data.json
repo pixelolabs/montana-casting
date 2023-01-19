@@ -64,7 +64,7 @@
               "button_text": "Button",
               "button_url": "shopify:\/\/collections\/basic-collection",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png",
-              "mobile_image": "shopify:\/\/shop_images\/jacket-4_3x_2109f8d2-102b-4097-9bed-b16ba3b34747.webp"
+              "mobile_image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
           },
           "fe7e537f-1a8a-4583-b16a-86020de2e14b": {
@@ -74,7 +74,8 @@
               "description": "Enter description here",
               "button_text": "Button",
               "button_url": "",
-              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png",
+              "mobile_image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
           }
         },
