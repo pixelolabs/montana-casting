@@ -59,19 +59,20 @@
           "a52d1730-8649-4566-a684-93c3daaa2bcd": {
             "type": "slide",
             "settings": {
-              "heading": "Fly fishing gear rigorously tested on Montana waters.",
-              "sub_heading": "Rods. Reels. Lines. Accessories. It’s time to own the river.",
-              "slid_button": "Optional Button",
+              "title": "Enter title here",
+              "description": "Enter description here",
+              "button_text": "Button",
               "button_url": "shopify:\/\/collections\/basic-collection",
-              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
+              "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png",
+              "mobile_image": "shopify:\/\/shop_images\/jacket-4_3x_2109f8d2-102b-4097-9bed-b16ba3b34747.webp"
             }
           },
           "fe7e537f-1a8a-4583-b16a-86020de2e14b": {
             "type": "slide",
             "settings": {
-              "heading": "Enter heading here",
-              "sub_heading": "Enter sub-heading here",
-              "slid_button": "Button",
+              "title": "Enter title here",
+              "description": "Enter description here",
+              "button_text": "Button",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
             }
@@ -100,7 +101,7 @@
           "03cd45a8-2031-4bd9-a37a-e3961945fc87": {
             "type": "category",
             "settings": {
-              "heading": "Title",
+              "title": "Title",
               "button": "Button",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
@@ -109,7 +110,7 @@
           "5cedc94f-304a-4091-8267-04a4631ce7a9": {
             "type": "category",
             "settings": {
-              "heading": "Title",
+              "title": "Title",
               "button": "Button",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
@@ -118,7 +119,7 @@
           "e84ce9b6-59ca-432a-b1fa-a9fc482f76e9": {
             "type": "category",
             "settings": {
-              "heading": "Title",
+              "title": "Title",
               "button": "Button",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
@@ -127,7 +128,7 @@
           "206e6bb6-0250-4c24-a808-17b228605c8d": {
             "type": "category",
             "settings": {
-              "heading": "Title",
+              "title": "Title",
               "button": "Button",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
@@ -136,7 +137,7 @@
           "1ce5ba2f-02a3-49bf-9e46-21ad005c3470": {
             "type": "category",
             "settings": {
-              "heading": "Title",
+              "title": "Title",
               "button": "Button",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
@@ -145,7 +146,7 @@
           "32b0c0c0-9dc9-4b0a-a6be-a306069b01ed": {
             "type": "category",
             "settings": {
-              "heading": "Title",
+              "title": "Title",
               "button": "Button",
               "button_url": "",
               "image": "shopify:\/\/shop_images\/footer-landscape-desktop.png"
@@ -161,14 +162,6 @@
           "32b0c0c0-9dc9-4b0a-a6be-a306069b01ed"
         ],
         "settings": {
-        }
-      },
-      "testimonial-section": {
-        "type": "testimonial-section",
-        "settings": {
-          "image": "shopify:\/\/shop_images\/where_we_are_today_-_about.png",
-          "content": "“I have fished all over the world with every brand of fly fishing rods and reels you can imagine. My Montana         Casting Company equipment is the best I’ve ever owned. Lightweight yet extremely powerful, I will never fish         with another brand of rod again!”",
-          "name": "— Mike C."
         }
       },
       "insta-section": {
@@ -221,8 +214,15 @@
         ],
         "settings": {
           "username": "@montanacastingco",
-          "insta_button": "Follow Us on Instagram",
-          "insta_url": ""
+          "button_text": "",
+          "button_link": ""
+        }
+      },
+      "testimonial": {
+        "type": "testimonial",
+        "settings": {
+          "description": "Add Descriptions",
+          "attributes": ""
         }
       }
     },
