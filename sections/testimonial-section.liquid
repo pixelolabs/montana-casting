@@ -6,9 +6,9 @@
         <img src="{{ section.settings.image | img_url: 'large' }}" alt="">
         {% endif %}
       </div>
-      {% if section.settings.content %}
+      {% if section.settings.description %}
       <p class="h3">
-        {{ section.settings.content }}
+        {{ section.settings.description }}
       </p>
       {% endif %}
       {% if section.settings.name %}
@@ -28,10 +28,10 @@
          "label": "Background Image"
       },
       {
-        "id": "content",
+        "id": "description",
         "type": "text",
-        "label": "Add Contents",
-        "default": "Content"
+        "label": "Description",
+        "default": "Add Descriptions"
       },
       {
         "id": "name",
