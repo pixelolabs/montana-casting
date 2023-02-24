@@ -1,153 +1,176 @@
 <footer>
-  {%if section.settings.topImage != blank%}
-  <div class="image-section">
-    <picture>
-      <source media="(max-width: 600px)"
-          srcset="{{ section.settings.topImage | img_url: 'master' }}">
-      <img class="lazyload lazypreload" src="{{ section.settings.topImage | img_url: 'master' }}" alt="">
-  </picture>
-  </div>
-  {%endif%}
+  {% if section.settings.topImage != blank %}
+    <div class="image-section">
+      <picture>
+        <source
+          media="(max-width: 600px)"
+          srcset="{{ section.settings.topImage | img_url: 'master' }}"
+        >
+        <img class="lazyload lazypreload" src="{{ section.settings.topImage | img_url: 'master' }}" alt="">
+      </picture>
+    </div>
+  {% endif %}
   <div class="footer">
-  <div class="container-1440">
-    <div class="main-footer flex">
-     {%if section.settings.logo != blank%}
-      <div class="main-footer__logo">
-        <img class="lazyload lazypreload" src="{{ section.settings.logo | img_url: 'master' }}" alt="montana-logo">
-      </div>
-      {%endif%}
-      <div class="main-footer__newsletter flex">
-        {% if section.settings.newsContent != blank %}
-          <p class="uppercase">{{section.settings.newsContent}}</p>
-        {%endif%}
-        <span class="h3 capitalize">{{section.settings.newsTitle}}</span>
-        <div class="newsletter-form">
-          <form action="#" method="post">
-            <input type="email" value="" name="EMAIL" class="email" aria-label="email" placeholder="Email Address"
-              required>
-            <input type="submit" value="Submit" name="subscribe" aria-label="submit" class="btn-submit uppercase">
-            {%include "icon-white-arrow" %}
-          </form>
+    <div class="container-1440">
+      <div class="main-footer flex">
+        {% if section.settings.logo != blank %}
+          <div class="main-footer__logo">
+            <img class="lazyload lazypreload" src="{{ section.settings.logo | img_url: 'master' }}" alt="montana-logo">
+          </div>
+        {% endif %}
+        <div class="main-footer__newsletter flex">
+          {% if section.settings.newsContent != blank %}
+            <p class="uppercase">{{ section.settings.newsContent }}</p>
+          {% endif %}
+          <span class="h3 capitalize">{{ section.settings.newsTitle }}</span>
+          <div class="newsletter-form">
+            <div class="klaviyo-form-RFqqct"></div>
+            <script
+              async
+              type="text/javascript"
+              src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XECpKk"
+            ></script>
+
+            <form action="#" method="post">
+              <input
+                type="email"
+                value=""
+                name="EMAIL"
+                class="email"
+                aria-label="email"
+                placeholder="Email Address"
+                required
+              >
+              <input type="submit" value="Submit" name="subscribe" aria-label="submit" class="btn-submit uppercase">
+              {% include 'icon-white-arrow' %}
+            </form>
+          </div>
+
+          <div class="social-icons">
+            {% include 'social-icons' %}
+          </div>
+          {% if section.settings.bottomTextLink != blank %}
+            <div class="bottom-text-link">
+              {{ section.settings.bottomTextLink }}
+            </div>
+          {% endif %}
         </div>
-        <div class="social-icons">
-          {% include "social-icons" %}
+        <div class="main-footer__nav flex-wrap">
+          {% assign fotterMenu = linklists[section.settings.footerMenu] %}
+          {% for link in fotterMenu.links %}
+            <div class="footer-links">
+              <p class="accordion-toggle">
+                <!-- Remove accordion-toggle class for Basic design without accordions in mobile -->
+                {{ link.title | escape }}
+                <!-- Remove icons for Basic design without accordions in mobile -->
+                {% include 'icon-red-arrow' %}
+              </p>
+              <ul class="accordion-content">
+                <!-- Remove accordion-content class for Basic design without accordions in mobile -->
+                {% for childlink in link.links %}
+                  <li>
+                    <a href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
         </div>
-        {%if section.settings.bottomTextLink != blank%}
-        <div class="bottom-text-link">
-          {{section.settings.bottomTextLink}}
-        </div>
-        {%endif%}
-        
-      </div>
-      <div class="main-footer__nav flex-wrap">
-        {% assign fotterMenu = linklists[section.settings.footerMenu]%}
-        {% for link in fotterMenu.links %}
-        <div class="footer-links">
-          <p class="accordion-toggle">
-            <!-- Remove accordion-toggle class for Basic design without accordions in mobile -->
-            {{ link.title | escape }}
-            <!-- Remove icons for Basic design without accordions in mobile -->
-            {%include "icon-red-arrow" %}
-          </p>
-          <ul class="accordion-content">
-            <!-- Remove accordion-content class for Basic design without accordions in mobile -->
-            {% for childlink in link.links %}
-            <li><a href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a></li>
-            {%endfor%}
-          </ul>
-        </div>
-        {%endfor%}
       </div>
     </div>
-  </div>
-  <!-- Copyright -->
-  <div class="copyright">
-    <div class="copyright-section flex-wrap"> {% assign footerLegalMenu = linklists[section.settings.footerLegalMenu]%}
-      <ul class="flex legal-links ">
-        {% for link in footerLegalMenu.links %}
-        <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
-        {%endfor%}
-      </ul>
-      {%if section.settings.copyrightText != blank%}
-      <div class="copyright-text"><p>{{section.settings.copyrightText}}</p></div>
-      {%endif%}
-      {%if section.settings.designedByText != blank%}
-      <div class="link"><a href="{{section.settings.designedByLink}}" title="{{section.settings.designedByText}}">{{section.settings.designedByText}}</a></div>
-      {%endif%}
-      
+    <!-- Copyright -->
+    <div class="copyright">
+      <div class="copyright-section flex-wrap">
+        {% assign footerLegalMenu = linklists[section.settings.footerLegalMenu] %}
+        <ul class="flex legal-links ">
+          {% for link in footerLegalMenu.links %}
+            <li>
+              <a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        {% if section.settings.copyrightText != blank %}
+          <div class="copyright-text">
+            <p>{{ section.settings.copyrightText }}</p>
+          </div>
+        {% endif %}
+        {% if section.settings.designedByText != blank %}
+          <div class="link">
+            <a href="{{section.settings.designedByLink}}" title="{{section.settings.designedByText}}">
+              {{- section.settings.designedByText -}}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="js__back-to-top icon-back-to-top">
+      {% include 'icon-back-to-top' %}
     </div>
   </div>
-  <div class="js__back-to-top icon-back-to-top">
-    {%include "icon-back-to-top"%}
-  </div>
-  </div>
-  
 </footer>
-
-
 
 {% schema %}
 {
-"name": {
-"en": "Footer"
-},
-"settings": [
-{
-"type": "image_picker",
-"id": "topImage",
-"label": "Top Image"
-},
-{
-"type": "image_picker",
-"id": "logo",
-"label": "Logo"
-},
-{
-"type": "text",
-"id" : "newsTitle",
-"label": "Newsletter Title",
-"default": "Newsletter"
-},
-{
-"type": "text",
-"id" : "newsContent",
-"label": "Newsletter Content",
-"default": "Subscribe to receive updates, access to exclusive deals, and more."
-},
-{
-"type": "richtext",
-"id" : "bottomTextLink",
-"label": "Bottom Text"
-},
-{
-"type": "link_list",
-"id": "footerMenu",
-"label": {
-"en": "Footer Menu"
-}
-},
-{
-"type": "link_list",
-"id": "footerLegalMenu",
-"label": {
-"en": "Footer Legal Menu"
-}
-},
-{
-"type": "text",
-"id": "copyrightText",
-"label": "Copyright Text"
-},
-{
-"type": "text",
-"id": "designedByText",
-"label": "Designed By Text"
-},
-{
-"type": "url",
-"id": "designedByLink",
-"label": "Designed By Link"
-}
-]
+  "name": {
+    "en": "Footer"
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "topImage",
+      "label": "Top Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "newsTitle",
+      "label": "Newsletter Title",
+      "default": "Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "newsContent",
+      "label": "Newsletter Content",
+      "default": "Subscribe to receive updates, access to exclusive deals, and more."
+    },
+    {
+      "type": "richtext",
+      "id": "bottomTextLink",
+      "label": "Bottom Text"
+    },
+    {
+      "type": "link_list",
+      "id": "footerMenu",
+      "label": {
+        "en": "Footer Menu"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "footerLegalMenu",
+      "label": {
+        "en": "Footer Legal Menu"
+      }
+    },
+    {
+      "type": "text",
+      "id": "copyrightText",
+      "label": "Copyright Text"
+    },
+    {
+      "type": "text",
+      "id": "designedByText",
+      "label": "Designed By Text"
+    },
+    {
+      "type": "url",
+      "id": "designedByLink",
+      "label": "Designed By Link"
+    }
+  ]
 }
 {% endschema %}
