@@ -89,24 +89,5 @@
 {% section 'instagram' %}
 
 
-<iframe
-src="https://testsho472h.aftership.com/iframe?page-name=tracking-page"
-scrolling="no"
-frameborder="0"
->
-</iframe>
-<script>
-// resize iframe to fit content
-const iframe = document.querySelector("iframe");
-window.addEventListener("message", (event) => {
-  if (
-    event.data &&
-    event.data.type === "resize" &&
-    typeof event.data.scrollHeight === "number" &&
-    iframe
-  ) {
-    iframe.style.height = event.data.scrollHeight + "px";
-  }
-});
-</script>
+<div id="as-root"></div><script>(function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n))return;r=e.createElement(t);r.id=n;r.src="https://button.aftership.com/all.js?username=testsho472h";i.parentNode.insertBefore(r,i)})(document,"script","aftership-jssdk")</script>
 
