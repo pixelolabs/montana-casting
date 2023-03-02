@@ -10,11 +10,7 @@
     {% include 'sm-og-data' %}
     {% include 'scripts_head' %}
     {{ content_for_header }}
-    {% comment %}
-      <!-- Extra Apps Per Theme-->
-      {% render 'hulkapps-wishlist-js' %}
-      <link href='//hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/hulkapps-wishlist-styles.css' rel='stylesheet'>
-    {% endcomment %}
+ 
   </head>
 
   <body class="template-{{ request.page_type | handle }}">
@@ -26,14 +22,6 @@
       {% section 'footer' %}
     </div>
     {% include 'scripts_footer' %}
-    {% comment %}
-      <!-- Extra Scripts for Apps-->
-      <!-- Hulk App WishList for PDP -->
-      {% if template != null %}{% endif %}
-      {% render 'hulkappsWishlistPopup' %} {% if template != null %}
-      <script type='text/javascript'
-        src='//hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/hulkapps-wishlist-global.js'></script>{% endif %}
-      <div data-wishlist-wrapper style='display:none' data-time='2021-06-18'></div>
-    {% endcomment %}
+
   </body>
 </html>
