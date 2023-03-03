@@ -68,6 +68,9 @@
 
         </div>
       </div>
+      {% if content_for_header contains 'cdn.parcelifyapp.com\/parcelify-components' %}
+  {% render 'parcelify-rate-calculator' %}
+{% endif %}
     </form>
   </div>
 </div>
