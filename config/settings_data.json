@@ -231,6 +231,14 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "15855116478794245213": {
+        "type": "shopify:\/\/apps\/order-delivery-date-manager\/blocks\/app-embed\/97657349-f9be-4991-ac2a-30ca8400a839",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   }
 }
